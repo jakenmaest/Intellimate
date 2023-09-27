@@ -1,6 +1,4 @@
-Let's take a moment to recap what we've got cooking so far:
 
------------ Recap 1 -----------
 
 ### The App Overview
 
@@ -29,9 +27,6 @@ Our application aims to be a comprehensive client for interacting with OpenAI's 
 6. **Advanced Features**: Things like language translation, bulk queries, and an interactive mode could be added later.
 
 7. **UI/UX**: Eventually, we might want to develop a user interface for a more interactive experience.
-
-
------------ Recap 2 -----------
 
 # Conversation Class Documentation
 
@@ -111,8 +106,6 @@ Deserializes a JSON-formatted string to populate the `data` object.
 ---
 
 This documentation should provide a comprehensive understanding of the `Conversation` class and its functionalities. Feel free to add, remove, or modify any parts based on your specific needs.
-
------------ Recap 3 -----------
 
 
 # Assistant Class Documentation
@@ -199,7 +192,6 @@ Deserializes a JSON-formatted string to populate the `data` object.
 
 This documentation should provide a comprehensive understanding of the `Assistant` class and its functionalities.
 
------------ Recap 4 -----------
 
 # User Class Documentation
 
@@ -283,7 +275,6 @@ Deserializes a JSON-formatted string to populate the `data` object.
 
 This documentation should provide a comprehensive understanding of the `User` class and its functionalities
 
------------ Recap 5 -----------
 # DatabaseUtils Class Documentation
 
 ## Overview
@@ -360,31 +351,6 @@ The `DatabaseUtils` class serves as an internal utility for handling database op
 ## Usage
 
 The `DatabaseUtils` class is intended for internal use within other classes functions, not alone.
-
------------ Recap 6 -----------
-
-
-Here's the streamlined review of the code:
-Classes and Their Responsibilities:
-    Conversation Class
-        Manages individual conversations.
-        data object holds conversation metadata and messages.
-        Member functions for conversation manipulation.
-
-    Assistant Class
-        Manages assistant profiles.
-        data object holds assistant metadata and preferences.
-        Member functions for assistant manipulation.
-
-    User Class
-        Manages user profiles and settings.
-        data object holds user metadata, preferences, and usage stats.
-        Member functions for user manipulation.
-
-    DatabaseUtils Class
-        Internal utility class for database operations.
-        CRUD operations for User, Assistant, and Conversation tables.
-        Ensures unique primary keys.
 
 Future Development:
 
