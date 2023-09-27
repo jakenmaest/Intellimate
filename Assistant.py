@@ -1,8 +1,24 @@
 import json
+from typing import List, Dict, Any, Union
 
 class Assistant:
-    def __init__(self, assistant_id, assistant_name, assistant_model, persona, likes, dislikes, relationship, expertise, status, tags, last_active, active_conversations, language, version, custom_settings):
-        self.data = {
+    def __init__(self, 
+                 assistant_id: str, 
+                 assistant_name: str, 
+                 assistant_model: str, 
+                 persona: str, 
+                 likes: List[str], 
+                 dislikes: List[str], 
+                 relationship: str, 
+                 expertise: str, 
+                 status: str, 
+                 tags: List[str], 
+                 last_active: str, 
+                 active_conversations: List[str], 
+                 language: str, 
+                 version: str, 
+                 custom_settings: Dict[str, Any]) -> None:
+        self.data: Dict[str, Union[str, List[str], Dict[str, Any]]] = {
             "assistant_id": assistant_id,
             "assistant_name": assistant_name,
             "assistant_model": assistant_model,
@@ -20,12 +36,12 @@ class Assistant:
             "custom_settings": custom_settings
         }
 
-    def to_json(self):
+    def to_json(self) -> str:
         return json.dumps(self.data)
 
     @classmethod
-    def from_json(cls, json_str):
-        data = json.loads(json_str)
+    def from_json(cls, json_str: str) -> 'Assistant':
+        data: Dict[str, Any] = json.loads(json_str)
         return cls(
             data["assistant_id"],
             data["assistant_name"],
@@ -44,14 +60,14 @@ class Assistant:
             data["custom_settings"]
         )
 
-    def update_status(self, new_status):
+    def update_status(self, new_status: str) -> None:
         self.data["status"] = new_status
 
-    def update_last_active(self, timestamp):
+    def update_last_active(self, timestamp: str) -> None:
         self.data["last_active"] = timestamp
 
-    def add_conversation(self, conversation_id):
+    def add_conversation(self, conversation_id: str) -> None:
         self.data["active_conversations"].append(conversation_id)
 
-    def remove_conversation(self, conversation_id):
+    def remove_conversation(self, conversation_id: str) -> None:
         self.data["active_conversations"].remove(conversation_id)
