@@ -351,8 +351,9 @@ The `DatabaseUtils` class serves as an internal utility for handling database op
 ## Usage
 
 The `DatabaseUtils` class is intended for internal use within other classes functions, not alone.
+---
 
-Future Development:
+## Future Development
 
     IntelliMateClient Class
         Will tie everything together.
