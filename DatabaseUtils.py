@@ -3,6 +3,9 @@ import os
 import json
 from typing import Dict, List, Any, Tuple, Union
 
+## TODO: Add Session CRUD functionality, along with another table
+##          at create_database for seesion data.
+
 class DatabaseUtils:
     def __init__(self, db_name: str = "IntelliMateClient.db") -> None:
         self.db_name: str = db_name
